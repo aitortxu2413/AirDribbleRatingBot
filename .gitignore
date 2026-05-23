@@ -1,0 +1,5 @@
+out/*
+.vs/*
+*.exe
+CMakeSettings.json
+token.txt
