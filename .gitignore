@@ -3,3 +3,4 @@ out/*
 *.exe
 CMakeSettings.json
 token.txt
+build/*

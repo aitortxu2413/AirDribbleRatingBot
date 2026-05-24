@@ -36,66 +36,17 @@ It features a modular architecture, clean error handling with `std::expected`, a
 
 ### On Linux (GCC)
 
-#### 1. Install GCC 14+
+#### No manual installation is needed
 
-Use your distribution’s package manager. On Ubuntu/Debian you can use:
-
-```bash
-sudo apt install g++-14
-```
-
-Make sure it is the default compiler, or adjust the CXX variable in the Makefile.
-
-#### 2. Install D++ 10.1.5
-
-The D++ project provides precompiled .deb and .rpm packages that can be installed directly, without building from source.
-
-Debian / Ubuntu (.deb):
-
-```bash
-sudo apt install wget
-wget -O dpp.deb https://dl.dpp.dev/
-sudo dpkg -i dpp.deb
-```
-
-Fedora / RHEL (.rpm):
-
-```bash
-sudo dnf install wget
-wget -O dpp.rpm https://dl.dpp.dev/latest/linux-x64/rpm
-sudo dnf localinstall dpp.rpm
-```
-
-If the above commands do not work, or you prefer to build from source, follow the instructions at [Building D++](https://dpp.dev/building-dpp.html).
-
-#### 3. Install nlohmann_json
-
-Install it using your package manager:
-
-```bash
-# Debian / Ubuntu
-sudo apt install nlohmann-json3-dev
-
-# Fedora / RHEL
-sudo dnf install nlohmann-json-devel
-```
-
-#### 4. Verify installation
-
-```bash
-pkg-config --cflags --libs dpp
-pkg-config --cflags nlohmann_json
-```
-
-Both commands should return valid compiler flags.
+The project automatically donwload D++ 10.1.5 (precompiled for GCC, Debian) when you first build with Make. D++ itself includes nlohmann/json headers. All depencdencies are placed inside the build folder and linked statically in release mode.
 
 ### On Windows (MSVC)
 
 #### No manual installation is needed.
 
-The project uses CMake’s FetchContent to automatically download D++ 10.1.5 (precompiled for MSVC) and nlohmann_json when you first build. All dependencies are placed inside the build folder and linked statically.
+The project uses CMake’s FetchContent to automatically download D++ 10.1.5 (precompiled for MSVC) when you first build. D++ itself includes nlohmann/json headers. All dependencies are placed inside the out/build folder and linked statically in release mode.
 
-Just ensure you have Visual Studio 2022 with the Desktop development with C++ workload installed.
+Just ensure you have Visual Studio 2022 or Visual Studio 2026 with the Desktop development with C++ workload installed.
 
 ## Configuration
 
