@@ -1,6 +1,6 @@
 # Contributing Guide
 
-Thanks for contributing to AirDribbleRatingBot.
+Thanks for contributing to Air Dribble Rating Bot.
 
 ## 🧱 Project rules
 
