@@ -2,5 +2,5 @@ out/*
 .vs/*
 *.exe
 CMakeSettings.json
-token.txt
+config.json
 build/*
