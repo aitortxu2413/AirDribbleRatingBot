@@ -1,0 +1,68 @@
+{
+    "grounddweller": {
+        "name": "Ground Dweller",
+        "ratingNeeded": 0,
+        "roleId": "1486747106063683604",
+        "players": []
+    },
+    "beginner": {
+        "name": "Beginner",
+        "ratingNeeded": 795.3,
+        "roleId": "1278281473354371134",
+        "players": []
+    },
+    "apprentice": {
+        "name": "Apprentice",
+        "ratingNeeded": 1042.8,
+        "roleId": "1466128745684533330",
+        "players": []
+    },
+    "intermediate": {
+        "name": "Intermediate",
+        "ratingNeeded": 1698.4,
+        "roleId": "1278281045460123668",
+        "players": []
+    },
+    "advanced": {
+        "name": "Advanced",
+        "ratingNeeded": 2002,
+        "roleId": "1502292522725277816",
+        "players": []
+    },
+    "expert": {
+        "name": "Expert",
+        "ratingNeeded": 8603.1,
+        "roleId": "1278281294991851592",
+        "players": []
+    },
+    "master": {
+        "name": "Master",
+        "ratingNeeded": 11089.1,
+        "roleId": "1286084860728840232",
+        "players": []
+    },
+    "legend": {
+        "name": "Legend",
+        "ratingNeeded": 12178.1,
+        "roleId": "1278281639360987168",
+        "players": []
+    },
+    "mythic": {
+        "name": "Mythic",
+        "ratingNeeded": 12728.1,
+        "roleId": "1286084975971532862",
+        "players": []
+    },
+    "demigod": {
+        "name": "Demigod",
+        "ratingNeeded": 12730.3,
+        "roleId": "1286087383732981832",
+        "players": []
+    },
+    "airdribblegod": {
+        "name": "Air Dribble God",
+        "ratingNeeded": 11586,
+        "roleId": "1278281886656892968",
+        "player": null
+    }
+}

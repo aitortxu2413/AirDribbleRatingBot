@@ -4,8 +4,6 @@ A modern Discord bot written in **C++23** using [D++](https://github.com/brainbo
 
 It is designed for the Air Dribble Rating discord server and implements a structured ranking and challenge system.
 
----
-
 ## 🚀 Features
 
 - Challenge-based ranking system
@@ -14,18 +12,14 @@ It is designed for the Air Dribble Rating discord server and implements a struct
 - Modular command architecture
 - Linux, Debian (Makefile) + Windows (CMake) support
 
----
-
 ## Prerequisites
 
-* Git – to clone the repository.
-* A C++23‑compatible compiler:
-  * Linux: GCC 14 or newer.
-  * Windows: Visual Studio 2022/2026 (MSVC) with C++23 support.
-* CMake (version ≥ 3.20) – only required on Windows.
-* pkg-config – usually already present on Linux.
-
----
+- Git – to clone the repository.
+- A C++23‑compatible compiler:
+  - Linux: GCC 14 or newer.
+  - Windows: Visual Studio 2022/2026 (MSVC) with C++23 support.
+- CMake (version ≥ 3.20) – only required on Windows.
+- pkg-config – usually already present on Linux.
 
 ## ⚙️ Setup
 
@@ -34,7 +28,7 @@ git clone https://github.com/yourusername/AirDribbleRatingBot.git
 cd AirDribbleRatingBot
 ```
 
-## Create config:
+## Create config
 
 ```bash
 cp config.example.json config.json
@@ -42,15 +36,29 @@ cp config.example.json config.json
 
 Edit token.
 
-## Build
+## Build and run
 
 ### On Linux, Debian (GCC)
 
-No needed instalations.
+No needed instalations. The Makefile provides four build modes. All binaries are placed inside build/.
+
+
+| Command                   | What it does                                                             |
+| ------------------------- | ------------------------------------------------------------------------ |
+| `make` / `make debug-run` | Compile in debug mode (-g -O0 -march=native + warnings) and run the bot. |
+| `make compile`            | Only compile in debug mode (no execution).                               |
+| `make -j$(nproc) release` | Compile in release mode (-O3 -flto=jobserver, portable) and run the bot. |
+| `make compile-release`    | Only compile in release mode (no execution).                             |
+| `make clean`              | Remove build/ directory.                                                 |
+
+#### Examples:
 
 ```bash
-make
-make release
+# Quick test (debug)
+make # Compiles and runs in debug mode
+
+# Full optimization, ready to distribute (static binary)
+make -j$(nproc) release # Compiles and runs in release mode using parallel compilation
 ```
 
 ### On Windows (MSVC)
@@ -59,14 +67,12 @@ No needed instalations.
 
 Compile the CMakeLists.txt on Visual Studio 2022/2026 and you will be ready to go.
 
----
-
 ## Documentation
 
-* Commands: docs/commands.md
-* Contributing: docs/contributing.md
-* Roadmap: docs/roadmap.md
-* Architecture: docs/architecture.md
+- Commands: docs/commands.md
+- Contributing: docs/contributing.md
+- Roadmap: docs/roadmap.md
+- Architecture: docs/architecture.md
 
 ## ⚠️ Note
 
